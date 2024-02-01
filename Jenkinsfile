@@ -20,5 +20,15 @@ pipeline {
                 echo "Integration"
             }
         }
+    } post {
+        always {
+            echo "Finished"
+        }
+        success {
+            echo "Successful build"
+        }
+        failure {
+            echo "Failure to build"
+        }
     }
 }
